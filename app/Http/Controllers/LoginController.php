@@ -20,13 +20,11 @@ class LoginController extends Controller
 
         $credentials = $request->only('username','password');
 
-        if (Auth::attempt($credentials)) {
-            return redirect()->route('main');
+        if (!Auth::attempt($credentials)) {
+            return back()->with('mensaje','Credenciales Incorrectas');
         }
 
-        return back()->withErrors([
-            'email' => 'Las credenciales no coinciden con nuestros registros.',
-        ])->onlyInput('email');
+        return redirect()->route('main');
     }
 
     public function logout(Request $request){
