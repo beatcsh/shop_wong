@@ -1,2 +1,2 @@
 # shop_wong
-ola
+This is an university project in progress.
