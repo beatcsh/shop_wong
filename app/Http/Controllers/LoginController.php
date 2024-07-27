@@ -20,11 +20,14 @@ class LoginController extends Controller
 
         $credentials = $request->only('username','password');
 
-        if (!Auth::attempt($credentials)) {
-            return back()->with('mensaje','Credenciales Incorrectas');
+        if (Auth::attempt($credentials)) {
+            return redirect()->route('main');
         }
 
-        return redirect()->route('main');
+        if (!Auth::attempt($credentials)) {
+            // dd('algo esta mal');
+            return back()->with('mensaje','Credenciales Incorrectas');
+        }
     }
 
     public function logout(Request $request){
