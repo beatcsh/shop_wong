@@ -39,7 +39,7 @@
 
                 <button type="submit"
                     class="w-[90%] bg-violet-500 text-white px-3 py-2 rounded-md shadow-sm hover:bg-violet-700 transition-all duration-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 mb-4">Add</button>
-                {{-- montse te amo <3 --}}
+                
             </form>
         </div>
         <div class="my-8 w-[90%] h-auto">
